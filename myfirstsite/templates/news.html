@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% extends 'base.html' %}
+{% block content %}
+    {% include 'add.html' %}
+    <h3>Новости</h3>
+    <div>
+        <a href="{% url 'index' %}">Главная</a>
+    </div>
+    <br>
+    <div>{{ now | date:"D d M Y" }}</div>
+    <br>
+    <div>
+        {{ my_str }}
+    </div>
+{% endblock %}
+</body>
+</html>
