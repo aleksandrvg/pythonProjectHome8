@@ -2,15 +2,43 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Main</title>
+    <style>
+        .menu {
+	width: 100%;
+	display: table;
+    }
+    .menu ul {
+        display: table-row;
+    }
+    .menu li {
+        display: table-cell;
+        background: #2767A0;
+    }
+    .menu ul li:hover, .menu a:hover {
+        background: #666;
+    }
+    .menu li a {
+        display: block;
+        padding: 8px 15px;
+        color: #fff;
+        text-align: center;
+    }
+    </style>
 </head>
 <body>
 {% extends 'base.html' %}
 {% block content %}
     {% include 'add.html' %}
-    <h3>Главная</h3>
-    <div>
-        <a href="{% url 'news' %}">Новости</a>
+    <div class="menu">
+        <ul>
+            <li><a href="{% url 'index' %}">Главная</a></li>
+            <li><a href="{% url 'news' %}">Новости</a></li>
+            <li><a href="#">Телепрограмма</a></li>
+            <li><a href="#">Прямой эфир</a></li>
+            <li><a href="#">Видеотека</a></li>
+            <li><a href="#">16+</a></li>
+        </ul>
     </div>
     <br>
     <div>{{ now | date:"SHORT_DATE_FORMAT" }}</div>
