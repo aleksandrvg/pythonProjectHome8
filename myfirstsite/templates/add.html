@@ -3,8 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <style>
+        .menu {
+	width: 100%;
+	display: table;
+    }
+    .menu ul {
+        display: table-row;
+    }
+    .menu li {
+        display: table-cell;
+    }
+    .menu ul li:hover, .menu a:hover {
+        background: #666;
+    }
+    .menu li a {
+        display: block;
+        padding: 8px 15px;
+        text-align: center;
+    }
+    ul li.current_page_item a {
+        background-color: black;
+        color: red;
+    }
+    </style>
 </head>
 <body>
-    <h4 style="background-color: pink">АнхТВ</h4>
+    <h4>АнхТВ</h4>
+    <div class="menu">
+        <ul>
+            <li class="current_page_item"><a href="{% url 'index' %}">Главная</a></li>
+            <li class="current_page_item"><a href="{% url 'news' %}">Новости</a></li>
+            <li class="current_page_item"><a href="#">Телепрограмма</a></li>
+            <li class="current_page_item"><a href="#">Прямой эфир</a></li>
+            <li class="current_page_item"><a href="#">Видеотека</a></li>
+            <li class="current_page_item"><a href="#">16+</a></li>
+        </ul>
+    </div>
 </body>
 </html>
