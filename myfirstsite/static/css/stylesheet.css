@@ -1,0 +1,82 @@
+.menu {
+    width: 100%;
+	display: table;
+    }
+.menu ul {
+        display: table-row;
+    }
+.menu li {
+        display: table-cell;
+    }
+.menu ul li:hover, .menu a:hover {
+        background: #666;
+    }
+.menu li a {
+        display: block;
+        padding: 8px 15px;
+        text-align: center;
+    }
+ul li.current_page_item a {
+        background-color: black;
+        color: #fff;
+    }
+.heading_1 {
+    font-weight: bold;
+    color: red
+}
+.heading_2 {
+    font-weight: bold
+}
+.picture_1 {
+    float: left;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+.picture_1 img {
+    width: 310px;
+    height: 310px;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+.picture_2 {
+    float: left;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+.picture_2 img {
+    width: 600px;
+    height: 400px;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+.picture_3 {
+    float: left;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+.picture_3 img {
+    width: 50px;
+    height: 50px;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+.block-1 {
+    float: left;
+    width: 310px;
+    padding: 10px 10px 10px 10px;
+}
+.block-2 {
+    float: left;
+    width: 600px;
+    padding: 10px 10px 10px 10px;
+}
+.block-3 {
+    float: left;
+    padding: 10px 10px 10px 10px;
+}
+.block-4 {
+    float: left
+}
+.block-5 {
+    float: right
+}

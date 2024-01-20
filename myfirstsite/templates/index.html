@@ -1,19 +1,49 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Main</title>
+    <link rel = "stylesheet" href="{% static 'css/stylesheet.css' %}" type="text/css">
 </head>
 <body>
-{% extends 'base.html' %}
 {% block content %}
     {% include 'add.html' %}
-    <br>
-    <div>{{ now | date:"SHORT_DATE_FORMAT" }}</div>
-    <br>
-    <div>
-        {{ my_str }}
-    </div>
+    <main>
+        <div class="block-1">
+            <div class="picture_1">
+                <img src="{% static 'img/egyptdn.jpg' %}">
+            </div>
+            <div class="heading_1">
+                {{ my_str_1 }}
+            </div>
+            <div>
+                {{ my_str_2 }}
+            </div>
+        </div>
+        <div class="block-1">
+            <div class="picture_1">
+                <img src="{% static 'img/egyptn.jpg' %}">
+            </div>
+            <div class="heading_1">
+                {{ my_str_3 }}
+            </div>
+            <div>
+                {{ my_str_4 }}
+            </div>
+        </div>
+        <div class="block-1">
+            <div class="picture_1">
+                <img src="{% static 'img/sphinx_1.jpg' %}">
+            </div>
+            <div class="heading_1">
+                {{ my_str_5 }}
+            </div>
+            <div>
+                {{ my_str_6 }}
+            </div>
+        </div>
+    </main>
 {% endblock %}
 </body>
 </html>

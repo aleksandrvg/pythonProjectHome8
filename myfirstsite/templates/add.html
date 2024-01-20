@@ -1,44 +1,39 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <style>
-        .menu {
-	width: 100%;
-	display: table;
-    }
-    .menu ul {
-        display: table-row;
-    }
-    .menu li {
-        display: table-cell;
-    }
-    .menu ul li:hover, .menu a:hover {
-        background: #666;
-    }
-    .menu li a {
-        display: block;
-        padding: 8px 15px;
-        text-align: center;
-    }
-    ul li.current_page_item a {
-        background-color: black;
-        color: red;
-    }
-    </style>
+    <link rel = "stylesheet" href="{% static 'css/stylesheet.css' %}" type="text/css">
 </head>
 <body>
-    <h4>АнхТВ</h4>
-    <div class="menu">
-        <ul>
-            <li class="current_page_item"><a href="{% url 'index' %}">Главная</a></li>
-            <li class="current_page_item"><a href="{% url 'news' %}">Новости</a></li>
-            <li class="current_page_item"><a href="#">Телепрограмма</a></li>
-            <li class="current_page_item"><a href="#">Прямой эфир</a></li>
-            <li class="current_page_item"><a href="#">Видеотека</a></li>
-            <li class="current_page_item"><a href="#">16+</a></li>
-        </ul>
-    </div>
+    <main>
+        <div>
+            <div class="block-4">
+                <h2>АнхТВ</h2>
+            </div>
+            <div class="block-5">
+                <div class="picture_3">
+                    <img src="{% static 'img/youtube.png' %}">
+                </div>
+                <div class="picture_3">
+                    <img src="{% static 'img/instagram.jpg' %}">
+                </div>
+                <div class="picture_3">
+                    <img src="{% static 'img/contact.png' %}">
+                </div>
+            </div>
+        </div>
+        <div class="menu">
+            <ul>
+                <li class="current_page_item"><a href="{% url 'index' %}"><h3>Главная</h3></a></li>
+                <li class="current_page_item"><a href="{% url 'news' %}"><h3>Новости</h3></a></li>
+                <li class="current_page_item"><a href="#"><h3>Телепрограмма</h3></a></li>
+                <li class="current_page_item"><a href="#"><h3>Прямой эфир</h3></a></li>
+                <li class="current_page_item"><a href="#"><h3>Видеотека</h3></a></li>
+                <li class="current_page_item"><a href="#"><h3>16+</h3></a></li>
+            </ul>
+        </div>
+    </main>
 </body>
 </html>
